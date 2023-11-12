@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: okmi4
+  name: oemiga
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: okmi4
+      app: oemiga
   template:
     metadata:
       labels:
-        app: okmi4
+        app: oemiga
     spec:
       containers:
-      - image: okteto.dev/okmi4:latest
-        name: okmi4
+      - image: okteto.dev/oemiga:latest
+        name: oemiga
         ports:
         - containerPort: 8080
         env:
@@ -25,4 +25,4 @@ spec:
         - name: ParameterSSENCYPT
           value: "chacha20-ietf-poly1305"
         - name: AUUID
-          value: "62391c87-553c-4260-af28-cd0827554c54"
+          value: "c56fa77c-64a3-4c81-8780-9531856fbd1a"
